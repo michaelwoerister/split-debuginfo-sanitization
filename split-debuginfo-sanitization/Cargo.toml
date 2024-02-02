@@ -1,0 +1,15 @@
+[package]
+name = "split-debuginfo-sanitization"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+debug = 2
+opt-level = 2
+split-debuginfo = "packed"
+codegen-units = 1
+
+[dependencies]
+regex = "1"
